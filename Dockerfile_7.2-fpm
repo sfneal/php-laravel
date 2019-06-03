@@ -12,3 +12,6 @@ RUN docker-php-ext-install -j$(nproc) gd
 # Install Docker PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql zip
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Copy PHP configuration file
+COPY local.ini /usr/local/etc/php/conf.d/local.ini
