@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sh ./build.sh
+
 docker push stephenneal/php-laravel:7
 docker push stephenneal/php-laravel:7.2-fpm
 docker push stephenneal/php-laravel:7.3.6-fpm-v1
