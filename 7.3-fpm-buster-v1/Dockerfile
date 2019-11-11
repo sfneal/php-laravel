@@ -10,10 +10,12 @@ RUN apt-get update -y && apt-get install -y \
     procps \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
-    libzip-dev
+    libzip-dev \
+	libgmp-dev
 
 # Install Docker PHP extensions
 RUN docker-php-ext-install \
+	gmp \
     pdo \
     pdo_mysql \
     zip
