@@ -2,11 +2,10 @@ FROM php:7.4-fpm
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS && install utilities
+#  - graphviz (dependency of erd-generator composer package)
 RUN apt-get update -y && apt-get install -y \
 	curl \
     git \
-
-    # dependency of erd-generator composer package
 	graphviz \
     openssl \
     libfreetype6-dev \
