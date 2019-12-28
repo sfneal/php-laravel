@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:7.4-fpm
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS && install utilities
