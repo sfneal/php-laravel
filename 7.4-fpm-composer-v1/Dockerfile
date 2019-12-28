@@ -4,17 +4,20 @@ MAINTAINER Stephen Neal <stephen@stephenneal.net>
 # Update OS && install utilities
 RUN apt-get update -y && apt-get install -y \
 	curl \
-    openssl \
-    zip \
-    unzip \
     git \
-    procps \
+
+    # dependency of erd-generator composer package
+	graphviz \
+    openssl \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libzip-dev \
 	libgmp-dev
+    procps \
+    unzip \
+    zip
 
-# Install PHP-GD extension (required to composer install phpoffice/phpspreadsheet)
+# Install PHP-GD extension (dependency of composer phpoffice/phpspreadsheet)
 RUN docker-php-ext-configure gd \
 		--with-freetype=/usr/include/ \
 		--with-jpeg=/usr/include/ \
