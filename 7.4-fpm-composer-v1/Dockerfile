@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libzip-dev \
-	libgmp-dev
+	libgmp-dev \
     procps \
     unzip \
     zip
