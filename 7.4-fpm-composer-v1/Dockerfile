@@ -14,12 +14,16 @@ RUN apt-get update -y && apt-get install -y \
     libzip-dev \
 	libgmp-dev
 
-# Install Docker PHP extensions
-RUN docker-php-ext-install \
-	gmp \
-    pdo \
-    pdo_mysql \
-    zip
+# Install PHP-GD extension (required to composer install phpoffice/phpspreadsheet)
+RUN docker-php-ext-configure gd \
+		--with-freetype=/usr/include/ \
+		--with-jpeg=/usr/include/ \
+	&& docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install \
+        pdo \
+        pdo_mysql \
+        zip \
+		gmp
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
