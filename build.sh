@@ -13,4 +13,5 @@ docker build -t stephenneal/php-laravel:7.3.7-fpm-buster-v1 "${DIR}"/7.3.7-fpm-b
 docker build -t stephenneal/php-laravel:7.4-fpm-buster-v1 "${DIR}"/7.4-fpm-buster-v1/
 docker build -t stephenneal/php-laravel:7.4-fpm-buster-v2 "${DIR}"/7.4-fpm-buster-v2/
 docker build -t stephenneal/php-laravel:7.4-fpm-composer-v1 "${DIR}"/7.4-fpm-composer-v1/
+docker build -t stephenneal/php-laravel:7.4-fpm-composer-v2 "${DIR}"/7.4-fpm-composer-v2/
 docker build -t stephenneal/php-laravel:7.4-rc-fpm-v1 "${DIR}"/7.4-rc-fpm-v1/
