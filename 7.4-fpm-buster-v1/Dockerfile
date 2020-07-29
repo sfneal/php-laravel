@@ -16,6 +16,7 @@ RUN apt-get update -y && apt-get install -y \
 # Install Docker PHP extensions
 RUN docker-php-ext-install \
 	gmp \
+	pcntl \
     pdo \
     pdo_mysql \
     zip

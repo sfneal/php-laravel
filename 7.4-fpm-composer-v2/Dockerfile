@@ -25,6 +25,7 @@ RUN docker-php-ext-configure intl \
 		--with-jpeg=/usr/include/ \
 	&& docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install \
+        pcntl \
         gmp \
         intl \
         pdo \
