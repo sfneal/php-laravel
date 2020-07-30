@@ -1,9 +1,10 @@
-FROM php:7.4-fpm-buster
+FROM php:7.4-fpm
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS && install utilities
 RUN apt-get update -y \
 	&& apt-get install -y \
+		expect-dev \
 		g++ \
 	    git \
 		libgmp-dev \
@@ -13,6 +14,8 @@ RUN apt-get update -y \
 	    libzip-dev \
 	    openssl \
 	    procps \
+	    sudo \
+	    supervisor \
 	    unzip \
 	    zip \
 	    zlib1g-dev

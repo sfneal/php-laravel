@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:7.3-fpm
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS && install utilities
@@ -16,7 +16,6 @@ RUN apt-get update -y && apt-get install -y \
 # Install Docker PHP extensions
 RUN docker-php-ext-install \
 	gmp \
-	pcntl \
     pdo \
     pdo_mysql \
     zip
