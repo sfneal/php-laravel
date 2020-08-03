@@ -7,12 +7,14 @@ RUN apt-get update -y \
 		expect-dev \
 		g++ \
 	    git \
+	    imagemagick \
 		libgmp-dev \
 	    libfreetype6-dev \
 	    libicu-dev \
 	    libjpeg62-turbo-dev \
 	    libzip-dev \
 	    openssl \
+	    php-imagick \
 	    procps \
 	    sudo \
 	    supervisor \
