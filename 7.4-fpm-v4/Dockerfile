@@ -14,7 +14,6 @@ RUN apt-get update -y \
 	    libjpeg62-turbo-dev \
 	    libzip-dev \
 	    openssl \
-	    php-imagick \
 	    procps \
 	    sudo \
 	    supervisor \
