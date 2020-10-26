@@ -1,10 +1,19 @@
 language: ruby
 
+env:
+  global:
+  - secure: LokJJQ3kc8wvg8XN+U+7yeaJW+ovwsaWADENvWTDziLUttEPa5yRJu3ob6p4PnyPE4TphFQ9E8OAMSdDuBE8Uuu+9J7MdQJ2RQZ73epuixsv8noUYZgVWLq0oa6+qwURNAavg6hll2aGUwOiqHoH9OwkS4pGq+IrmmM/1G4UFPuh0p1MjFq2NaxdvaKOSnpe0JBiVRor243rRJ+oBrcgzNW6Dn8RbWKBTI0VkqmSl9GHGbiTh7DFyCz5r0HMfjcrXq1NWtfW5kgdue/XwmhRvT7FBu0c39P0ENF/kpVfZ4ZY489uQ17Vvh4Ya8cGCc5ikAuJl2u3p82CMsvKveufHQ1vJ2/nraDDJAdSoVZqYjV1GORGY/mc40lL2iDTSmpmZm3UI48mucs4OnoOVAVfKkn+KJHS2w3x9FY2Ki2xEmZSyGXx9YMszxr/qY9Zt+CXVOk8r/Anm2mYOP8ekyOkh4PFawOZQMjhY67/X17Al3O741Uj4+CQztA+UNDQ6DvaZxKdawJxfTbZqNowEOFwHxDwp5THPowuKQ3bGMKND2zNXE4DLYX5ykQtYffDgG5Qbovudgpm8z0QVIwy00dNzQhtzw/gvVok9+5k2W3m8hNIh37KLKRBCm0Zgw+RB3aI4eHplp/HLlVM86JrioDKGUKdnN82H40cZFRvsLUo/Yk=
+  - secure: Su3npoOLKztGNuYHXSIu3kVLQUBJW9tBGLI4Gv/kzXxxRxJADbd2l61KBUlUryPm0HNFt+VKQYVEb0cnckDE3IzJGzGVqwra4BlrpELKE9LUU45wY6wDmrdN+trRDmNP9FIrY0X06r/d947USzHXDvM1yk/we0+WNXsDrLMZqcYfWclNYU6jG+KO6mB09QNcXFkIZMgniJL68cy1/AZdKnKpdTdx49iWQ+uLQw5tSPvzMRbqccdhdCH2jig9ktj0SAkvEPoQ2BKhB/vPm0dhbFi2xeya3S19lLNkKlT3mRXwR6kY3N/S0A1NoChSNyRrIRPA/bXyx6AYJri3f98k98GVZSTiDIOulrPANwhaEG15K4mY7+fOXRskf79rYlxdvRdb+gVyeeymBiMxqKpqxhWhtD+n8ud6wjhIwfJ9ymAku1JKmXBaiKU/HDOTxnTFfdAfgKmiDHhdyQTPNR0Le8IUnrd1mS38huNaKza8L11lmXkjM39bj6AQb60XATXVz2NM90zoT3rPomfzmQKmxDkx11fto1CveUpLYCLTH3U0PG7UbnekHttq2wpJjGQKyq8RrIdRZZLtx/D9LI6s9OvPteb1NDhdU+3Pt6gIGazT6aIiahvRJUnZvFYt5EbU2bxSOiv/CcTRC0HlzFFK8SqdaD7qDVT4EQkWZ7CTnOA=
+
 services:
-  - docker
+- docker
+
+before_script:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - sh build.sh
+- sh build.sh
 
 after_script:
-  - docker images
+- docker images
+- sh push.sh
