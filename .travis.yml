@@ -16,4 +16,4 @@ script:
 
 after_script:
 - docker images
-- sh push.sh
+#- sh push.sh
