@@ -19,5 +19,6 @@ docker push stephenneal/php-laravel:7.4-fpm-v3.1
 docker push stephenneal/php-laravel:7.4-fpm-composer-v1
 docker push stephenneal/php-laravel:7.4-fpm-composer-v2
 docker push stephenneal/php-laravel:7.4-rc-fpm-v1
+docker push stephenneal/php-laravel:8.0-fpm-v1
 docker push stephenneal/php-laravel:8.0-rc-fpm-v1
 docker push stephenneal/php-laravel:8.0-rc-fpm-v1.1
