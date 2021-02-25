@@ -24,6 +24,7 @@ env:
     - TAG=7.4-fpm-v3.1
     - TAG=7.4-rc-fpm-v1
     - TAG=8.0-fpm-v1
+    - TAG=8.0-fpm-v2
     - TAG=rc-fpm-v1
     - TAG=rc-fpm-v1.1
 
