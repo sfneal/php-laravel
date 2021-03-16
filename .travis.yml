@@ -44,6 +44,7 @@ after_script:
 
 deploy:
   provider: script
+  before_script: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
   script: sh push.sh "${TAG}"
   on:
     tags: true
