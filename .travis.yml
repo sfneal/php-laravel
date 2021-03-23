@@ -1,11 +1,6 @@
 services:
   - docker
 
-addons:
-  apt:
-    packages:
-      - docker-ce
-
 env:
   global:
     - secure: kJbji+QlSJEa9M8MfvnL/Hliqsj4MhaPdSCOT3QTlNDK5YAPMJn3nXNg1eLa0Plr/mX1PmxF41vGr6FF3r9L9qNgbUyMh6EXRAhwkukn6jVn49tZ8bevm4BWBI4L3kUboSz2bQ6LjltTruoWHReCe/W1m9J4aNwpVoUDmLGkTrihe+N6NH1Gae8PJKRAayZQtGTzDhbt+9L85ADEQ9kg4Keqo5wcNHvelcFo0wymBlM+E4RgyOt+TiECi15sg31JrlWZ1HUacHlTx4n8jzVvClxxnvvdpR9gaWscFJiBowNlXL3NjFvLbknYyDoDpsaUwX2xtzm/ssFpZXL3DWkSRr18dhTEYRLRyub6oyCaKs+alCJQ2rqB+fRR74+NeWIDEYHjaIs0tcNyh9L4FraFLRK4qMrSAIWANJpW7tt+vWCZNKyW7q67GAsVo2TevX/zJp0Dxx/jkGzMU35I3ROzLzztfc9vP1hgWXvfNGjFil52QTYKs1uGhBlMFDe9Cr/efZCCAn9LMz04H9Uk8vjAGBN9UkJ7L4bj28QjqYb1x+CxbP8WMXm20qQOisQ6yJ2yZizH0h056i36UBtOVMSndhz9LM3TVVBGohdtMui+ATTwp1S1GIApTKYsfsDOgmcz+VkPgnJGwt1d9Li6y6BP/MnrUyjSVN+KB0z0MP/p9Ns=
@@ -35,6 +30,13 @@ jobs:
   allow_failures:
     - env: TAG=rc-fpm-v1
     - env: TAG=rc-fpm-v1.1
+
+before_install:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+  - docker --version
 
 before_script:
   - echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin
