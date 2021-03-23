@@ -46,7 +46,7 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - sh build.sh "$TAG"
+  - docker build -t stephenneal/php-laravel:"${TAG}" ./"${TAG}"/
   - docker push stephenneal/php-laravel:"${TAG}"
 
 after_script:
