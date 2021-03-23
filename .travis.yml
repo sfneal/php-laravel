@@ -44,6 +44,6 @@ after_script:
 
 deploy:
   provider: script
-  script: docker logout && echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin && docker tag php-laravel:"${TAG}" stephenneal/php-laravel:"${TAG}" && docker push stephenneal/php-laravel:"${TAG}"
+  script: docker logout && echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin && docker tag stephenneal/php-laravel:"${TAG}" stephenneal/php-laravel:"${TAG}" && docker push stephenneal/php-laravel:"${TAG}"
   on:
     tags: true
