@@ -11,27 +11,28 @@ env:
     - secure: VvgwfV6fMEIPkSzlRSAa95vYvjaZzSa5+nlu850BoeLpTnQdEusszznmQvn8OAjM9IiNgKlzVq22xtvrrDWFS9LKpO+qKEStMdFd1oet+yVuAKYOTkDPuWDkIejrFNCZC3tYa4H2ZF1GBjGLusPkLbt8v+p3bZes6j53H7aC9t95Bxm/Z1QM/o1xuMIifCDrSpEpHMeX8BRBEpIIhtWmRbT1u8SVFExycioKRnQTkiu0rXj5All6G4hm7aB1pgkJ/P1RdtV5mLVYo8MtQxTeqBhxbMe87Iks6hCZ5R/Pel3x/HUSmBsbucrjY59ec/X2lhZLHz52/EmDu8lWWjAp+F9Ur2jOM83/uAjrSx34QVcgM6xZNvOjg4CjasemnhtZY3DNpxl950vZ+edYAnJdk7LAEqanmkgIT68GR9d9nCADz0/LVT7x9q958GxxYSTZ1fKH71M31s9GkOAH1QPV9lu9FRZeuARwqIiZRHx/GJ02+q/orhlh2Vtn71DvBRo8xzR3KVGNRiu2xiajNfvCTNs+8Zfv5mXxRXxlfDJVsYIzrg39mTLZHrzWPGrxl+MzA4YergcAef0YXx3tCX2H8ubFGq0OCtQNnYqJY+OUsoIn9/7XkciVVdT2BAmA5ldRUz2RPS0bmbi1oaNXNNDGY5ZKhuxhljJ5tOUAaY7YRUw=
 
   matrix:
-    - TAG=7
-    - TAG=7.2-fpm
-    - TAG=7.3-fpm-v1
-    - TAG=7.3.6-fpm-v1
-    - TAG=7.3.6-fpm-v2
-    - TAG=7.3.6-fpm-v3
-    - TAG=7.3.7-fpm-v1
-    - TAG=7.4-fpm-composer-v1
-    - TAG=7.4-fpm-composer-v2
-    - TAG=7.4-fpm-v1
-    - TAG=7.4-fpm-v2
-    - TAG=7.4-fpm-v3
-    - TAG=7.4-fpm-v3.1
-    - TAG=7.4-rc-fpm-v1
-    - TAG=8.0-fpm-v1
     - TAG=8.0-fpm-v2
+    - TAG=8.0-fpm-v1
+    - TAG=7.4-fpm-v3.1
+    - TAG=7.4-fpm-v3
+    - TAG=7.4-fpm-v2
+    - TAG=7.4-fpm-v1
+    - TAG=7.4-fpm-composer-v2
+    - TAG=7.4-fpm-composer-v1
+    - TAG=7.3.7-fpm-v1
+    - TAG=7.3.6-fpm-v3
+    - TAG=7.3.6-fpm-v2
+    - TAG=7.3.6-fpm-v1
+    - TAG=7.3-fpm-v1
+    - TAG=7.2-fpm
+    - TAG=7
+    - TAG=7.4-rc-fpm-v1
     - TAG=rc-fpm-v1
     - TAG=rc-fpm-v1.1
 
 jobs:
   allow_failures:
+    - env: TAG=7.4-rc-fpm-v1
     - env: TAG=rc-fpm-v1
     - env: TAG=rc-fpm-v1.1
 
