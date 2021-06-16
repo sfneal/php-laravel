@@ -25,14 +25,16 @@ env:
     - TAG=7.2-fpm
     - TAG=7
     - TAG=7.4-rc-fpm-v1
-    - TAG=rc-fpm-v1
-    - TAG=rc-fpm-v1.1
+    - TAG=8.1-rc-fpm-v1
+    - TAG=8.1-rc-fpm-v1.1
+    - TAG=8.1-rc-fpm-v2
 
 jobs:
   allow_failures:
     - env: TAG=7.4-rc-fpm-v1
-    - env: TAG=rc-fpm-v1
-    - env: TAG=rc-fpm-v1.1
+    - env: TAG=8.1-rc-fpm-v1
+    - env: TAG=8.1-rc-fpm-v1.1
+    - env: TAG=8.1-rc-fpm-v2
 
 before_script:
   - echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin

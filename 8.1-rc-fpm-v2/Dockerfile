@@ -1,4 +1,4 @@
-FROM php:rc-fpm
+FROM php:8.1-rc-fpm
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Update OS && install utilities
