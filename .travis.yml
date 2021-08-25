@@ -5,8 +5,8 @@ services:
 
 env:
   global:
-    - secure: kJbji+QlSJEa9M8MfvnL/Hliqsj4MhaPdSCOT3QTlNDK5YAPMJn3nXNg1eLa0Plr/mX1PmxF41vGr6FF3r9L9qNgbUyMh6EXRAhwkukn6jVn49tZ8bevm4BWBI4L3kUboSz2bQ6LjltTruoWHReCe/W1m9J4aNwpVoUDmLGkTrihe+N6NH1Gae8PJKRAayZQtGTzDhbt+9L85ADEQ9kg4Keqo5wcNHvelcFo0wymBlM+E4RgyOt+TiECi15sg31JrlWZ1HUacHlTx4n8jzVvClxxnvvdpR9gaWscFJiBowNlXL3NjFvLbknYyDoDpsaUwX2xtzm/ssFpZXL3DWkSRr18dhTEYRLRyub6oyCaKs+alCJQ2rqB+fRR74+NeWIDEYHjaIs0tcNyh9L4FraFLRK4qMrSAIWANJpW7tt+vWCZNKyW7q67GAsVo2TevX/zJp0Dxx/jkGzMU35I3ROzLzztfc9vP1hgWXvfNGjFil52QTYKs1uGhBlMFDe9Cr/efZCCAn9LMz04H9Uk8vjAGBN9UkJ7L4bj28QjqYb1x+CxbP8WMXm20qQOisQ6yJ2yZizH0h056i36UBtOVMSndhz9LM3TVVBGohdtMui+ATTwp1S1GIApTKYsfsDOgmcz+VkPgnJGwt1d9Li6y6BP/MnrUyjSVN+KB0z0MP/p9Ns=
-    - secure: VvgwfV6fMEIPkSzlRSAa95vYvjaZzSa5+nlu850BoeLpTnQdEusszznmQvn8OAjM9IiNgKlzVq22xtvrrDWFS9LKpO+qKEStMdFd1oet+yVuAKYOTkDPuWDkIejrFNCZC3tYa4H2ZF1GBjGLusPkLbt8v+p3bZes6j53H7aC9t95Bxm/Z1QM/o1xuMIifCDrSpEpHMeX8BRBEpIIhtWmRbT1u8SVFExycioKRnQTkiu0rXj5All6G4hm7aB1pgkJ/P1RdtV5mLVYo8MtQxTeqBhxbMe87Iks6hCZ5R/Pel3x/HUSmBsbucrjY59ec/X2lhZLHz52/EmDu8lWWjAp+F9Ur2jOM83/uAjrSx34QVcgM6xZNvOjg4CjasemnhtZY3DNpxl950vZ+edYAnJdk7LAEqanmkgIT68GR9d9nCADz0/LVT7x9q958GxxYSTZ1fKH71M31s9GkOAH1QPV9lu9FRZeuARwqIiZRHx/GJ02+q/orhlh2Vtn71DvBRo8xzR3KVGNRiu2xiajNfvCTNs+8Zfv5mXxRXxlfDJVsYIzrg39mTLZHrzWPGrxl+MzA4YergcAef0YXx3tCX2H8ubFGq0OCtQNnYqJY+OUsoIn9/7XkciVVdT2BAmA5ldRUz2RPS0bmbi1oaNXNNDGY5ZKhuxhljJ5tOUAaY7YRUw=
+    - secure: VCaBMYMjc5eZBhxRtadM+GjJdEgrf9eaEaxDqoty0Z0xr+Q9ftMsS/oMa1Zbu2sLkv4g3Yrqw5eWbim4TiLiF6wjXctHnJ4PqWq3jHiCjlswwHVvcDNgHlHiq2FCIVsIQlvc7lBTL1Wmoz4xIZvK2/nrQhYuTc5dFVd7JGfGb5JXtZscK3L8lLSMktIikdt+KK9F23j1DgGeF7KSFUSThr6yTvQindOEAuCUVBYnVPtchxgDaz8nPyweuE7rIhqUITyWVPNVURTDcHcXxLo3XVKpaLn7uZpXuBe4kNSkJw87T9vcFd3mMKP9krRJ/Vg8WWzSyclzorVZd9gyK/jUJxkV/P+gEqCiumZkNIHp0PGeqdw+iOo67Aygw61BDW2hK6qi1n2T/WmQMmCcUPSQNa85jNra9xpIh7SG3Giq+pBq7dRWSmahbuYiz69tS/99DjnDiaBo9Upwiu/mUVR/rhqDdzzelED7OmXZWY7UpmTku7Sbb5w0NR1y2OnSro4Gn/WIn82nMJ6CJ9GWwzYyPBIPKlDrQeXf9b/I8Gghr+Wn4ZkTSvFQCFkNswADqqId9eDfPySh3FRVzhtCDJoeJrp4He7gXHSta7wIMm+k68iHrg3He6a3luZ6zcj3rL4Xx7rqoGaD2URRqcd1qhVzQbtQzq7xqnFhGc27hqhn5f8=
+    - secure: P8bP86oZsRFqSizEOgD5RIYerjxyBVnMd19xYzalBFatWE/x4+Y0tV1Q7Lhja8G1S0N9p3dj7WJ40jZIXV6d4viIsHorrcVo/O7P6bPjZDCVQPeuh3yFWxzjRpHVzjfV7NR/IJH2Dsu/WJMe5JE3BhcAJwd375poXeNQdWpmtL5QQvOLrYMDPmoWYX5Lh01gDcza8sv+1tNtAaIakSAvOWZk+03j8PQBQt5HCpTllxYpqJm6ppwkUAGSfPHphcoG96spXIM6nEvPU6vhn/glsMWeUKWLSmXZAQ7SOvwOM+ljmkksx7pIdJEBgciVutX7r0t/dfmgE/qoDeTDJ1YvgIHzNY/BzpMBmp1zANEIfijS/p5PkYWnUjE2etJIFIPKzI0gXRxNJh+v+ELfd7q2kEAYWQ64+0EuBQexdM0wTmLgV49bnOEP50SCIpBHcCPyVOvzuYViWLeUXkQbMXzMWTeLEf/Tvh0OLwLLkmSV+iIcB8mJbkF6XLE72+o5W0tV81jyJ0vpioGs7lFCVb2IlqtY4gTPwd5o5lnIqxvnyQfxAkYShCaODYsGHMk6LoViZ4HniiQKIGoCt9ZZyHiUeQ3RCK3GA1m4398EwnLzaTi92D3SJMWpGydcVU8haDhGIMbVWurkaZ5040klFD9cNIDMISpbhJqTUq74DPMUxxo=
 
   matrix:
     - TAG=8.0-fpm-v2
@@ -50,12 +50,16 @@ script:
   - sudo bash build.sh "${TAG}"
 
 after_script:
-  - sudo bash push.sh "${TAG}"
   - docker images
 
 deploy:
-  provider: script
-  script: sudo bash push.sh "${TAG}"
-  on:
-    tags: true
+  - provider: script
+    script: sudo bash push.sh "${TAG}"
+    on:
+      tags: true
+
+  - provider: script
+    script: sudo bash push.sh "${TAG}"
+    on:
+      branch: master
 
