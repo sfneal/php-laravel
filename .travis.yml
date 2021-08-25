@@ -47,7 +47,7 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - sudo sh build.sh "${TAG}"
+  - sudo bash build.sh "${TAG}"
 
 after_script:
   - sudo bash push.sh "${TAG}"
