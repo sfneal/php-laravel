@@ -37,16 +37,17 @@ jobs:
     - env: TAG=8.1-rc-fpm-v2
 
 before_script:
-  - echo "$DOCKER_PASSWORD" | docker login docker.io --username "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - sh build.sh "${TAG}"
+  - sudo sh build.sh "${TAG}"
 
 after_script:
   - docker images
 
 deploy:
   provider: script
-  script: sh push.sh "${TAG}"
+  script: sudo bash push.sh "${TAG}"
   on:
     tags: true
+
