@@ -30,6 +30,7 @@ RUN docker-php-ext-configure intl \
 	&& docker-php-ext-install -j$(nproc) gd \
 	&& docker-php-ext-install \
 		gmp \
+    	exif \
 		intl \
 		pcntl \
 	    pdo \
