@@ -26,9 +26,3 @@ RUN docker-php-ext-configure intl \
 	    pdo \
 	    pdo_mysql \
 	    zip
-
-# Create a new group
-RUN groupadd -r phpusers && useradd -r -g phpusers user
-
-# Use the USER instruction to switch to the new user
-USER user
