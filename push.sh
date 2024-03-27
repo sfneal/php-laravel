@@ -20,9 +20,9 @@ if [ "$TAG" != null ]
     docker push stephenneal/php-laravel:7
     docker push stephenneal/php-laravel:7.2-fpm
     docker push stephenneal/php-laravel:7.3-fpm-v1
-    docker push stephenneal/php-laravel:7.3.6-fpm-v1
-    docker push stephenneal/php-laravel:7.3.6-fpm-v2
-    docker push stephenneal/php-laravel:7.3.6-fpm-v3
+#    docker push stephenneal/php-laravel:7.3.6-fpm-v1
+#    docker push stephenneal/php-laravel:7.3.6-fpm-v2
+#    docker push stephenneal/php-laravel:7.3.6-fpm-v3
     docker push stephenneal/php-laravel:7.3.7-fpm-v1
     docker push stephenneal/php-laravel:7.3.7-fpm-v1
     docker push stephenneal/php-laravel:7.4-fpm-v1
@@ -41,4 +41,7 @@ if [ "$TAG" != null ]
     docker push stephenneal/php-laravel:8.1-rc-fpm-v1
     docker push stephenneal/php-laravel:8.1-rc-fpm-v1.1
     docker push stephenneal/php-laravel:8.1-rc-fpm-v2
+    docker push stephenneal/php-laravel:8.2-fpm-v1
+    docker push stephenneal/php-laravel:8.2-fpm-v2
+    docker push stephenneal/php-laravel:8.2-fpm-v3
 fi

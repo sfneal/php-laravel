@@ -15,9 +15,9 @@ jobs:
                     7,
                     7.2-fpm,
                     7.3-fpm-v1,
-                    7.3.6-fpm-v1,
-                    7.3.6-fpm-v2,
-                    7.3.6-fpm-v3,
+#                    7.3.6-fpm-v1,
+#                    7.3.6-fpm-v2,
+#                    7.3.6-fpm-v3,
                     7.3.7-fpm-v1,
                     7.3.7-fpm-v1,
                     7.4-fpm-v1,
@@ -36,6 +36,9 @@ jobs:
                     8.1-rc-fpm-v1,
                     8.1-rc-fpm-v1.1,
                     8.1-rc-fpm-v2,
+                    8.2-fpm-v1,
+                    8.2-fpm-v2,
+                    8.2-fpm-v3,
                 ]
 
         name: TAG-${{ matrix.tag }}

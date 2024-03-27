@@ -37,3 +37,9 @@ RUN docker-php-ext-configure intl \
 # Copy PHP configuration files
 COPY local.ini /usr/local/etc/php/conf.d/local.ini
 COPY www.conf /usr/local/etc/php-fpm.d/www.conf
+
+# Create a new group
+RUN groupadd -r phpusers && useradd -r -g phpusers user
+
+# Use the USER instruction to switch to the new user
+USER myuser

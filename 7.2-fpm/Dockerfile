@@ -18,6 +18,3 @@ RUN docker-php-ext-install -j$(nproc) gd
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy PHP configuration files
-COPY local.ini /usr/local/etc/php/conf.d/local.ini
-COPY www.conf /usr/local/etc/php-fpm.d/www.conf
