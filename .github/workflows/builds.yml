@@ -37,6 +37,9 @@ jobs:
                     8.2-fpm-v1,
                     8.2-fpm-v2,
                     8.2-fpm-v3,
+                    8.3-fpm-v1,
+                    8.3-fpm-v2,
+                    8.3-fpm-v3,
                 ]
 
         name: TAG-${{ matrix.tag }}

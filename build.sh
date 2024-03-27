@@ -42,4 +42,7 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/php-laravel:8.2-fpm-v1 "${DIR}"/8.2-fpm-v1/
     docker build -t stephenneal/php-laravel:8.2-fpm-v2 "${DIR}"/8.2-fpm-v2/
     docker build -t stephenneal/php-laravel:8.2-fpm-v3 "${DIR}"/8.2-fpm-v3/
+    docker build -t stephenneal/php-laravel:8.3-fpm-v1 "${DIR}"/8.3-fpm-v1/
+    docker build -t stephenneal/php-laravel:8.3-fpm-v2 "${DIR}"/8.3-fpm-v2/
+    docker build -t stephenneal/php-laravel:8.3-fpm-v3 "${DIR}"/8.3-fpm-v3/
 fi
