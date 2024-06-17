@@ -11,7 +11,25 @@ if [ "$TAG" != null ]
   # Only build & push one image
   then
     sh "${DIR}"/build.sh "${TAG}"
-    docker push stephenneal/php-laravel:"${TAG}"
+
+    FILE="${DIR}"/"${TAG}"/_docker-tags.txt
+
+    # Check if image has multiple tags (indicated by file existence)
+    if [ -f "${FILE}" ]; then
+      echo "${TAG} directory has multiple Docker tags"
+
+      while IFS= read -r line; do
+        docker push stephenneal/php-laravel:"${line}"
+      done < "${DIR}"/"${TAG}"/_docker-tags.txt
+    else
+      docker push stephenneal/php-laravel:"${TAG}"
+
+      # Confirm the Tag is NOT an Release Candidate before pushing
+      if [ "$PUSH_LATEST" != null ]; then
+          docker tag stephenneal/php-laravel:"${TAG}" stephenneal/php-laravel:"${LATEST}"
+          docker push stephenneal/php-laravel:"${LATEST}"
+      fi
+    fi
 
   # Build & push all images
   else
