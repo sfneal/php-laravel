@@ -49,16 +49,16 @@ if [ "$TAG" != null ]
     docker push stephenneal/php-laravel:7.4-fpm-v3.1
     docker push stephenneal/php-laravel:7.4-fpm-composer-v1
     docker push stephenneal/php-laravel:7.4-fpm-composer-v2
-    docker push stephenneal/php-laravel:8.0-fpm-v1
-    docker push stephenneal/php-laravel:8.0-fpm-v2
-    docker push stephenneal/php-laravel:8.0-fpm-v3
-    docker push stephenneal/php-laravel:8.1-fpm-v1
-    docker push stephenneal/php-laravel:8.1-fpm-v2
-    docker push stephenneal/php-laravel:8.1-fpm-v3
-    docker push stephenneal/php-laravel:8.2-fpm-v1
-    docker push stephenneal/php-laravel:8.2-fpm-v2
-    docker push stephenneal/php-laravel:8.2-fpm-v3
-    docker push stephenneal/php-laravel:8.3-fpm-v1
-    docker push stephenneal/php-laravel:8.3-fpm-v2
-    docker push stephenneal/php-laravel:8.3-fpm-v3
+    docker push stephenneal/php-laravel:8.0-fpm-base
+    docker push stephenneal/php-laravel:8.0-fpm-exif
+    docker push stephenneal/php-laravel:8.0-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.1-fpm-base
+    docker push stephenneal/php-laravel:8.1-fpm-exif
+    docker push stephenneal/php-laravel:8.1-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.2-fpm-base
+    docker push stephenneal/php-laravel:8.2-fpm-exif
+    docker push stephenneal/php-laravel:8.2-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.3-fpm-base
+    docker push stephenneal/php-laravel:8.3-fpm-exif
+    docker push stephenneal/php-laravel:8.3-fpm-medialibrary
 fi
