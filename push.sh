@@ -11,7 +11,25 @@ if [ "$TAG" != null ]
   # Only build & push one image
   then
     sh "${DIR}"/build.sh "${TAG}"
-    docker push stephenneal/php-laravel:"${TAG}"
+
+    FILE="${DIR}"/"${TAG}"/_docker-tags.txt
+
+    # Check if image has multiple tags (indicated by file existence)
+    if [ -f "${FILE}" ]; then
+      echo "${TAG} directory has multiple Docker tags"
+
+      while IFS= read -r line; do
+        docker push stephenneal/php-laravel:"${line}"
+      done < "${DIR}"/"${TAG}"/_docker-tags.txt
+    else
+      docker push stephenneal/php-laravel:"${TAG}"
+
+      # Confirm the Tag is NOT an Release Candidate before pushing
+      if [ "$PUSH_LATEST" != null ]; then
+          docker tag stephenneal/php-laravel:"${TAG}" stephenneal/php-laravel:"${LATEST}"
+          docker push stephenneal/php-laravel:"${LATEST}"
+      fi
+    fi
 
   # Build & push all images
   else
@@ -31,16 +49,16 @@ if [ "$TAG" != null ]
     docker push stephenneal/php-laravel:7.4-fpm-v3.1
     docker push stephenneal/php-laravel:7.4-fpm-composer-v1
     docker push stephenneal/php-laravel:7.4-fpm-composer-v2
-    docker push stephenneal/php-laravel:8.0-fpm-v1
-    docker push stephenneal/php-laravel:8.0-fpm-v2
-    docker push stephenneal/php-laravel:8.0-fpm-v3
-    docker push stephenneal/php-laravel:8.1-fpm-v1
-    docker push stephenneal/php-laravel:8.1-fpm-v2
-    docker push stephenneal/php-laravel:8.1-fpm-v3
-    docker push stephenneal/php-laravel:8.2-fpm-v1
-    docker push stephenneal/php-laravel:8.2-fpm-v2
-    docker push stephenneal/php-laravel:8.2-fpm-v3
-    docker push stephenneal/php-laravel:8.3-fpm-v1
-    docker push stephenneal/php-laravel:8.3-fpm-v2
-    docker push stephenneal/php-laravel:8.3-fpm-v3
+    docker push stephenneal/php-laravel:8.0-fpm-base
+    docker push stephenneal/php-laravel:8.0-fpm-exif
+    docker push stephenneal/php-laravel:8.0-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.1-fpm-base
+    docker push stephenneal/php-laravel:8.1-fpm-exif
+    docker push stephenneal/php-laravel:8.1-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.2-fpm-base
+    docker push stephenneal/php-laravel:8.2-fpm-exif
+    docker push stephenneal/php-laravel:8.2-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.3-fpm-base
+    docker push stephenneal/php-laravel:8.3-fpm-exif
+    docker push stephenneal/php-laravel:8.3-fpm-medialibrary
 fi

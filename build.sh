@@ -11,7 +11,23 @@ if [ "$TAG" != null ]
 
   # Only build one image
   then
-    docker build -t stephenneal/php-laravel:"${TAG}" "${DIR}"/"${TAG}"/
+    FILE="${DIR}"/"${TAG}"/_docker-tags.txt
+
+    # Check if image has multiple tags (indicated by file existence)
+    if [ -f "${FILE}" ]; then
+      echo "${TAG} directory has multiple Docker tags"
+
+      TAGS=""
+      while IFS= read -r line; do
+        TAGS="${TAGS} -t stephenneal/php-laravel:${line}"
+      done < "${DIR}"/"${TAG}"/_docker-tags.txt
+
+      COMMAND="docker build ${TAGS} ${DIR}/${TAG}/"
+      echo "${COMMAND}"
+      $(echo "${COMMAND}")
+    else
+      docker build -t stephenneal/php-laravel:"${TAG}" "${DIR}"/"${TAG}"/
+    fi
 
   # Build all images
   else
@@ -29,16 +45,16 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/php-laravel:7.4-fpm-v3.1 "${DIR}"/7.4-fpm-v3.1/
     docker build -t stephenneal/php-laravel:7.4-fpm-composer-v1 "${DIR}"/7.4-fpm-composer-v1/
     docker build -t stephenneal/php-laravel:7.4-fpm-composer-v2 "${DIR}"/7.4-fpm-composer-v2/
-    docker build -t stephenneal/php-laravel:8.0-fpm-v1 "${DIR}"/8.0-fpm-v1/
-    docker build -t stephenneal/php-laravel:8.0-fpm-v2 "${DIR}"/8.0-fpm-v2/
-    docker build -t stephenneal/php-laravel:8.0-fpm-v3 "${DIR}"/8.0-fpm-v3/
-    docker build -t stephenneal/php-laravel:8.1-fpm-v1 "${DIR}"/8.1-fpm-v1/
-    docker build -t stephenneal/php-laravel:8.1-fpm-v2 "${DIR}"/8.1-fpm-v2/
-    docker build -t stephenneal/php-laravel:8.1-fpm-v3 "${DIR}"/8.1-fpm-v3/
-    docker build -t stephenneal/php-laravel:8.2-fpm-v1 "${DIR}"/8.2-fpm-v1/
-    docker build -t stephenneal/php-laravel:8.2-fpm-v2 "${DIR}"/8.2-fpm-v2/
-    docker build -t stephenneal/php-laravel:8.2-fpm-v3 "${DIR}"/8.2-fpm-v3/
-    docker build -t stephenneal/php-laravel:8.3-fpm-v1 "${DIR}"/8.3-fpm-v1/
-    docker build -t stephenneal/php-laravel:8.3-fpm-v2 "${DIR}"/8.3-fpm-v2/
-    docker build -t stephenneal/php-laravel:8.3-fpm-v3 "${DIR}"/8.3-fpm-v3/
+    docker build -t stephenneal/php-laravel:8.0-fpm-base "${DIR}"/8.0-fpm-base/
+    docker build -t stephenneal/php-laravel:8.0-fpm-exif "${DIR}"/8.0-fpm-exif/
+    docker build -t stephenneal/php-laravel:8.0-fpm-medialibrary "${DIR}"/8.0-fpm-medialibrary/
+    docker build -t stephenneal/php-laravel:8.1-fpm-base "${DIR}"/8.1-fpm-base/
+    docker build -t stephenneal/php-laravel:8.1-fpm-exif "${DIR}"/8.1-fpm-exif/
+    docker build -t stephenneal/php-laravel:8.1-fpm-medialibrary "${DIR}"/8.1-fpm-medialibrary/
+    docker build -t stephenneal/php-laravel:8.2-fpm-base "${DIR}"/8.2-fpm-base/
+    docker build -t stephenneal/php-laravel:8.2-fpm-exif "${DIR}"/8.2-fpm-exif/
+    docker build -t stephenneal/php-laravel:8.2-fpm-medialibrary "${DIR}"/8.2-fpm-medialibrary/
+    docker build -t stephenneal/php-laravel:8.3-fpm-base "${DIR}"/8.3-fpm-base/
+    docker build -t stephenneal/php-laravel:8.3-fpm-exif "${DIR}"/8.3-fpm-exif/
+    docker build -t stephenneal/php-laravel:8.3-fpm-medialibrary "${DIR}"/8.3-fpm-medialibrary/
 fi
