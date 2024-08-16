@@ -1,5 +1,5 @@
 FROM php:8.0-fpm
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS && install utilities
 RUN apt-get update -y \

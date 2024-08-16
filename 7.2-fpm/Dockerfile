@@ -1,5 +1,5 @@
 FROM php:7.2-fpm
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS
 RUN apt-get update -y && apt-get install -y openssl zip unzip git

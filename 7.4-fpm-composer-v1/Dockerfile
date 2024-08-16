@@ -1,5 +1,5 @@
 FROM php:7.4-fpm
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS && install utilities
 #  - graphviz (dependency of erd-generator composer package)

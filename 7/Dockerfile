@@ -1,5 +1,5 @@
 FROM php:7
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS & install dependencies
 RUN apt-get update -y \
