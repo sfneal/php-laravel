@@ -61,4 +61,7 @@ if [ "$TAG" != null ]
     docker push stephenneal/php-laravel:8.3-fpm-base
     docker push stephenneal/php-laravel:8.3-fpm-exif
     docker push stephenneal/php-laravel:8.3-fpm-medialibrary
+    docker push stephenneal/php-laravel:8.4-rc-fpm-base
+    docker push stephenneal/php-laravel:8.4-rc-fpm-exif
+    docker push stephenneal/php-laravel:8.4-rc-fpm-medialibrary
 fi

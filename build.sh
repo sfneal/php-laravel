@@ -57,4 +57,7 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/php-laravel:8.3-fpm-base "${DIR}"/8.3-fpm-base/
     docker build -t stephenneal/php-laravel:8.3-fpm-exif "${DIR}"/8.3-fpm-exif/
     docker build -t stephenneal/php-laravel:8.3-fpm-medialibrary "${DIR}"/8.3-fpm-medialibrary/
+    docker build -t stephenneal/php-laravel:8.4-rc-fpm-base "${DIR}"/8.4-rc-fpm-base/
+    docker build -t stephenneal/php-laravel:8.4-rc-fpm-exif "${DIR}"/8.4-rc-fpm-exif/
+    docker build -t stephenneal/php-laravel:8.4-rc-fpm-medialibrary "${DIR}"/8.4-rc-fpm-medialibrary/
 fi
