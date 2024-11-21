@@ -36,9 +36,9 @@ jobs:
                     8.3-fpm-base,
                     8.3-fpm-exif,
                     8.3-fpm-medialibrary,
-                    8.4-rc-fpm-base,
-                    8.4-rc-fpm-exif,
-                    8.4-rc-fpm-medialibrary,
+                    8.4-fpm-base,
+                    8.4-fpm-exif,
+                    8.4-fpm-medialibrary,
                 ]
 
         name: TAG-${{ matrix.tag }}
