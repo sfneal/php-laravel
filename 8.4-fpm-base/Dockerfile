@@ -1,4 +1,4 @@
-FROM php:8.4-rc-fpm
+FROM php:8.4-fpm
 LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS && install utilities
