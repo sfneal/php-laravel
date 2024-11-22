@@ -1,4 +1,4 @@
-FROM php:8.4-rc-fpm
+FROM php:8.4-fpm
 LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Update OS && install utilities
@@ -7,7 +7,9 @@ RUN apt-get update -y \
 		default-mysql-client \
 		expect-dev \
 		g++ \
+    	gifsicle \
 	    git \
+    	jpegoptim \
 	    imagemagick \
 		libgmp-dev \
 	    libfreetype6-dev \
@@ -15,6 +17,8 @@ RUN apt-get update -y \
 	    libjpeg62-turbo-dev \
 	    libzip-dev \
 	    openssl \
+    	optipng \
+    	pngquant \
 	    procps \
 	    sudo \
 	    supervisor \
