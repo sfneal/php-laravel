@@ -23,12 +23,6 @@ if [ "$TAG" != null ]
       done < "${DIR}"/"${TAG}"/_docker-tags.txt
     else
       docker push stephenneal/php-laravel:"${TAG}"
-
-      # Confirm the Tag is NOT an Release Candidate before pushing
-      if [ "$PUSH_LATEST" != null ]; then
-          docker tag stephenneal/php-laravel:"${TAG}" stephenneal/php-laravel:"${LATEST}"
-          docker push stephenneal/php-laravel:"${LATEST}"
-      fi
     fi
 
   # Build & push all images
